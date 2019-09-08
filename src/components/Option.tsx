@@ -7,10 +7,10 @@ interface IProps {
 
 export const Option = (props: IProps) => {
   return (
-    <li>
+    <div>
       <button onClick={props.onClick}>
         {props.children}
       </button>
-    </li>
+    </div>
   )
 }
