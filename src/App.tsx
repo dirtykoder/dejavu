@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
-import PageOne from './pages/PageOne';
+import AlarmStarts from './pages/AlarmStarts';
 import { IPageModule } from './types';
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState(PageOne as IPageModule)
+  const [currentPage, setCurrentPage] = useState(AlarmStarts as IPageModule)
 
   return (
     <div className="App">
