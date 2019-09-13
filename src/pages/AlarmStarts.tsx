@@ -10,12 +10,11 @@ import SnoozeAlarm from './SnoozeAlarm'
 import WakeUp from './WakeUp'
 
 import sixAm from '../images/6am.gif'
+import { globalStyles } from '../constants/styles'
 
 const PageContent: IPageComponent = (props) => {
   const timeString = format(props.state.timeOfDay, "h:mm a")
   const timeIsSixAm = timeString == "6:00 AM"
-
-  const ClockGif = () => timeIsSixAm ? <img src={sixAm} /> : <></>
 
   return (
     <Page>
@@ -25,7 +24,7 @@ const PageContent: IPageComponent = (props) => {
 
       <br />
 
-      <ClockGif />
+      {timeIsSixAm && <img src={sixAm} style={globalStyles.image}  />}
 
       <br />
 
