@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 
 interface IProps {
-  children: JSX.Element[] | JSX.Element
   onClick: () => void
 }
 
-export const Option = (props: IProps) => {
+export const Option: FunctionComponent<IProps> = (props) => {
   return (
     <div>
       <button onClick={props.onClick}>

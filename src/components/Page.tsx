@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 
 const style = {
   maxWidth: 800,
@@ -10,11 +10,9 @@ const style = {
   borderRadius: 10
 }
 
-interface IProps {
-  children: JSX.Element[] | JSX.Element
-}
+interface IProps {}
 
-export const Page = (props: IProps) => {
+export const Page: FunctionComponent<IProps> = (props) => {
   return (
     <div style={style}>
       {props.children}

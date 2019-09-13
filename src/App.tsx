@@ -22,13 +22,18 @@ const App: React.FC = () => {
   const [state, dispatch] = useReducer(
     reducer,
     {
-      timeOfDay: new Date(2019, 9, 13, 6, 0)
+      timeOfDay: new Date(2019, 9, 13, 6, 0),
+      playerName: "Samantha"
     }
   )
 
   return (
     <div className="App">
-      <currentPage.PageContent navigateToPage={setCurrentPage} state={state} dispatch={dispatch} />
+      <currentPage.PageContent
+        navigateToPage={setCurrentPage}
+        state={state}
+        dispatch={dispatch}
+      />
     </div>
   );
 }

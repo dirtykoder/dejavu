@@ -2,6 +2,7 @@ import { Dispatch } from "react";
 
 export interface IGameState {
   timeOfDay: Date
+  playerName: string
 }
 
 export interface IGameStateAction {

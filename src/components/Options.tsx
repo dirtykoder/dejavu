@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 
 const style = {
   marginTop: 20,
@@ -11,10 +11,9 @@ const style = {
 }
 
 interface IProps {
-  children: JSX.Element[] | JSX.Element
 }
 
-export const Options = (props: IProps) => {
+export const Options: FunctionComponent<IProps> = (props) => {
   return (
     <div style={style}>
       {props.children}
